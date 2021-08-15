@@ -1,0 +1,134 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User page</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- tailwind cdn link here -->
+    <style>
+      .font-class {
+        font-family: "operator mono";
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="text-5xl text-center mt-14 font-semibold font-class">
+        Let's get some<span class="text-pink-400 font-bold"> Mooney!!</span>
+      </h1>
+    </header>
+    <main class="w-3/4 mx-auto">
+      <section>
+        <!-- Deposite, Balance, Withdraw statement -->
+        <div class="grid grid-flow-col grid-cols-3 mt-12 text-white gap-4">
+          <!-- Deposite column -->
+          <div class="bg-green-400 p-10 rounded-md">
+            <p class="text-4xl mb-3 font-semibold">Deposite</p>
+            <p class="text-6xl">
+              $<span id="total-deposit" class="font-semibold">00</span>
+            </p>
+          </div>
+          <!-- Withdraw column -->
+          <div class="bg-blue-400 p-10 rounded-md">
+            <p class="text-4xl mb-3 font-semibold">Withdraw</p>
+            <p class="text-6xl">
+              $<span id="total-withdraw" class="font-semibold">00</span>
+            </p>
+          </div>
+          <!-- Balance column -->
+          <div class="bg-pink-400 p-10 rounded-md">
+            <p class="text-4xl mb-3 font-semibold">Balance</p>
+            <p class="text-6xl">
+              $<span id="total-balance" class="font-semibold">00</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Deposite and withdraw amount -->
+      <section>
+        <div class="grid grid-cols-2 mt-12 gap-3">
+          <!-- Deposite option -->
+          <div class="bg-blue-400 p-10 text-center rounded-md">
+            <h3
+              class="
+                text-3xl text-white
+                font-semibold
+                mb-3
+                text-center
+                font-class
+              "
+            >
+              Want to <span class="text-blue-800">Deposite ?</span>
+            </h3>
+            <button
+              id="deposit-btn"
+              class="
+                mx-auto
+                bg-blue-600
+                shadow-lg
+                font-semibold
+                text-white
+                px-8
+                rounded
+                py-2
+              "
+            >
+              Deposite
+            </button>
+            <input
+              type="text"
+              id="deposit-amount"
+              name=""
+              placeholder="Deposite amount"
+              class="mb-4 p-2 rounded w-2/4 rounded-md outline-none mx-auto"
+            />
+          </div>
+          <!-- Withdraw option -->
+          <div class="bg-green-400 p-10 text-center rounded-md">
+            <h3
+              class="
+                text-3xl text-white
+                font-semibold
+                mb-3
+                text-center
+                font-class
+              "
+            >
+              Need to <span class="text-green-800">Withdraw ?</span>
+            </h3>
+            <input
+              type="text"
+              id="withdraw-amount"
+              name=""
+              placeholder="Withdraw amount"
+              class="mb-4 p-2 rounded w-2/4 rounded-md outline-none mx-auto"
+            />
+            <button
+              id="withdraw-btn"
+              class="
+                mx-auto
+                bg-green-600
+                shadow-lg
+                font-semibold
+                text-white
+                px-8
+                rounded
+                py-2
+              "
+            >
+              Withdraw
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/js/User-page.js"></script>
+  </body>
+</html>
